@@ -1,0 +1,107 @@
+:root {
+	--transparent-grey: rgba(0,0,0,0.5); 
+}
+
+body { 
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(bgawan.jpg);
+	background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#window, #slide-container {
+ 	width: 1000px;
+    border-radius: 50px;
+}
+
+#slide-container {
+	max-height: 600px;
+	min-height: 600px;
+	overflow: hidden; 
+	position: relative; 
+}
+
+.slide {
+	width: 100%; 
+	min-height: 200px; 
+}
+
+.slides {
+	display: block; 
+}
+
+.arrow {
+	color: rgb(0, 0, 0); 
+	font-size: 56px; 
+	position: absolute; 
+	top: 50%; 
+	transform: translate(0%, -50%); 
+	padding: 16px; 
+	background-color: rgba(0,0,0,0); 
+	transition: background-color 0.3s ease; 
+}
+
+.arrow:hover {
+	cursor: pointer;
+	background-color: var(--transparent-grey);
+}
+
+#next {
+	left: 100%; 
+	transform: translate(-100%, -50%); 
+	border-radius: 4px 0px 0px 4px; 
+}
+
+#previous {
+	border-radius: 0px 4px 4px 0px; 
+}
+
+#text-bar {
+	background-color: var(--transparent-grey);
+	width: 100%;
+	height: 36px; 
+	position: absolute; 
+	top: 100%;
+	transform: translate(0%, -100%);  
+	text-align: center; 
+	height: 36px;
+  line-height: 36px;
+}
+
+#place {
+	padding: 0px;
+	margin: 0px; 
+	color: white;
+	position: relative;
+	display: inline-block;
+}
+
+#dots-container {
+	width: 100%;
+	height: 20px; 
+	text-align: center; 
+}
+
+.dots {
+	width: 8px;
+	height: 8px;
+	background-color: rgba(0,0,0,0.2); 
+	border-radius: 100%; 
+	display: inline-block; 
+	margin: 8px 2px; 
+}
+
+.dots:hover {
+	cursor: pointer; 
+	background-color: rgba(0,0,0,0.4);
+}
+
+.active-dot {
+	background-color: rgba(0,0,0,0.6); 
+}
