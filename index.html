@@ -1,38 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiikawa Carousel</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script defer src="./scripts.js"></script>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Chiikawa Carousel</title> 
+    <!-- link to css -->
+    <link rel="stylesheet" type="text/css" href="./style.css"> 
+    <!-- link to js -->
+    <script defer src="./scripts.js"></script> 
 </head>
 <body>
-    <div id="window">
-        <div id="slide-container">
+    <div id="window"> <!-- wrapper semua elemen -->
+        <div id="slide-container"> <!-- wrapper slides + arrow + text, tanpa dots -->
+            <!-- slide 1 -->
             <div class="slides">
                 <img class="slide" src="chiikawa a.jpg"> 
             </div>
-
+            <!-- slide 2 -->
             <div class="slides">
                 <img class="slide" src="chiikawa b.jpg"> 
             </div>
-        
+            <!-- slide 3 -->
             <div class="slides">
                 <img class="slide" src="chiikawa c.jpg"> 
             </div>
-
+            <!-- slide 4 -->
             <div class="slides">
                 <img class="slide" src="chiikawa d.jpg"> 
             </div>
             
-            <a id="previous" class="arrow">&#10094</a>
-            <a id="next" class="arrow">&#10095</a>
+            <!-- arrow button -->
+            <a id="previous" class="arrow">&#10094</a> <!-- left -->
+            <a id="next" class="arrow">&#10095</a>     <!-- right -->
+
+            <!-- text box -->
             <div id="text-bar">
-                <p id="place"></p>
+                <p id="place"></p> <!-- tempat nama gambar -->
             </div>
         </div>
-        <div id="dots-container"></div>
+        <div id="dots-container"></div> <!-- container dot -->
     </div>
 </body>
 </html>

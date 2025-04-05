@@ -1,7 +1,9 @@
+/* opacity rendah, reusable buat berbagai elemen yg ada */
 :root {
 	--transparent-grey: rgba(0,0,0,0.5); 
 }
 
+/* carousel ada ditengah layar krn bodynya dicenter */
 body { 
 	font-family: Arial, Helvetica, sans-serif;
 	width: 100%;
@@ -9,14 +11,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url(bgawan.jpg);
+	background-image: url(bgawan.jpg); /* bg image awan */
 	background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #window, #slide-container {
- 	width: 1000px;
+ 	width: 1000px; /* width main container */
     border-radius: 50px;
 }
 
@@ -24,7 +26,7 @@ body {
 	max-height: 600px;
 	min-height: 600px;
 	overflow: hidden; 
-	position: relative; 
+	position: relative; /* untuk posisiin arrow & textbox */
 }
 
 .slide {
@@ -33,9 +35,10 @@ body {
 }
 
 .slides {
-	display: block; 
+	display: block; /* slide ditampilin 1 1 */
 }
 
+/* bentukan arrownya */
 .arrow {
 	color: rgb(0, 0, 0); 
 	font-size: 56px; 
@@ -47,14 +50,15 @@ body {
 	transition: background-color 0.3s ease; 
 }
 
+/* kalau di hover, muncul bg opacity rendah tadi spt yg di paling atas */
 .arrow:hover {
 	cursor: pointer;
-	background-color: var(--transparent-grey);
+	background-color: var(--transparent-grey); 
 }
 
 #next {
 	left: 100%; 
-	transform: translate(-100%, -50%); 
+	transform: translate(-100%, -50%); /* geser ke kiri biar sejajar sm sisi kanan container */
 	border-radius: 4px 0px 0px 4px; 
 }
 
@@ -68,10 +72,9 @@ body {
 	height: 36px; 
 	position: absolute; 
 	top: 100%;
-	transform: translate(0%, -100%);  
+	transform: translate(0%, -100%);  /* geser ke bawah, tapi ttp di dalam container */
 	text-align: center; 
-	height: 36px;
-  line-height: 36px;
+	line-height: 36px; 
 }
 
 #place {
@@ -91,7 +94,7 @@ body {
 .dots {
 	width: 8px;
 	height: 8px;
-	background-color: rgba(0,0,0,0.2); 
+	background-color: rgba(0,0,0,0.2); /* warna dots biasa */
 	border-radius: 100%; 
 	display: inline-block; 
 	margin: 8px 2px; 
@@ -99,9 +102,9 @@ body {
 
 .dots:hover {
 	cursor: pointer; 
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.4); /* kalau di hover, lbh gelap */
 }
 
 .active-dot {
-	background-color: rgba(0,0,0,0.6); 
+	background-color: rgba(0,0,0,0.6); /* kalau aktif, dot makin pekat */
 }
